@@ -1,0 +1,19 @@
+# Temporary and backup files
+*.bak
+*.backup
+*.save
+*.save.*
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key

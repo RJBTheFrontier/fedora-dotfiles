@@ -1,0 +1,35 @@
+
+# ==========================================================
+# WOFI CONFIGURATION
+# Theme: Graphite x Fedora Blue
+# Platform: Fedora Linux / Hyprland
+# ==========================================================
+
+show=drun
+prompt=Search applications...
+allow_images=true
+image_size=24
+insensitive=true
+matching=fuzzy
+gtk_dark=true
+
+width=550
+height=420
+location=center
+columns=1
+orientation=vertical
+halign=fill
+content_halign=fill
+justify=left
+
+no_actions=true
+hide_scroll=true
+parse_search=true
+
+# Keep launcher behavior predictable
+key_up=Up
+key_down=Down
+key_left=Left
+key_right=Right
+key_submit=Return
+key_exit=Escape

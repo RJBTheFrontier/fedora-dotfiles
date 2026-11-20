@@ -1,0 +1,87 @@
+
+/* ==========================================================
+   WOFI — GRAPHITE x FEDORA BLUE
+   ========================================================== */
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window {
+    background-color: #111111;
+    border: 2px solid #3C6EB4;
+    border-radius: 12px;
+}
+
+/* Main layout */
+#outer-box {
+    padding: 14px;
+    background-color: #111111;
+}
+
+#input {
+    background-color: #1B1B1B;
+    color: #D6D6D6;
+
+    border: 1px solid #333333;
+    border-radius: 8px;
+
+    padding: 11px 14px;
+    margin-bottom: 12px;
+
+    caret-color: #51A2DA;
+}
+
+#input:focus {
+    border: 1px solid #3C6EB4;
+}
+
+/* Results */
+#inner-box {
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0;
+}
+
+#entry {
+    background-color: transparent;
+    color: #D6D6D6;
+
+    padding: 9px 11px;
+    margin: 2px 0;
+
+    border-radius: 7px;
+}
+
+#entry image {
+    margin-right: 10px;
+}
+
+#entry:selected {
+    background-color: #294B73;
+    color: #FFFFFF;
+}
+
+#entry:selected #text {
+    color: #FFFFFF;
+}
+
+#text {
+    color: #D6D6D6;
+}
+
+/* Scrollbar */
+scrollbar {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: #3C6EB4;
+    border-radius: 5px;
+}

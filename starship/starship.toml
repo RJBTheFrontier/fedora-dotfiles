@@ -1,0 +1,135 @@
+
+# ==========================================================
+# STARSHIP CONFIGURATION
+# Theme: Graphite x Fedora Blue
+# Shell: Bash
+# Platform: Fedora Linux / Hyprland
+# ==========================================================
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# General
+add_newline = true
+command_timeout = 1000
+scan_timeout = 30
+
+format = """
+[╭─](#3C6EB4)$os$username$hostname$directory$git_branch$git_status
+[╰─](#3C6EB4)$character"""
+
+right_format = """
+$python$conda$cmd_duration$status$time"""
+
+# OS
+[os]
+disabled = false
+style = "fg:#51A2DA"
+
+[os.symbols]
+Fedora = " "
+
+# Username
+[username]
+show_always = false
+style_user = "fg:#D6D6D6"
+style_root = "fg:#E06C75"
+format = "[$user]($style) "
+
+# Hostname
+[hostname]
+ssh_only = true
+style = "fg:#888888"
+format = "[@$hostname]($style) "
+
+# Directory
+[directory]
+style = "fg:#51A2DA bold"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = " "
+read_only_style = "fg:#E06C75"
+home_symbol = "~"
+use_os_path_sep = true
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Projects" = "󰲋 "
+"Development" = "󰲋 "
+"Desktop" = "󰇄 "
+
+# Git
+[git_branch]
+symbol = " "
+style = "fg:#51A2DA"
+format = " [$symbol$branch]($style)"
+
+[git_status]
+style = "fg:#D6D6D6"
+format = " [$all_status$ahead_behind]($style)"
+conflicted = "=${count} "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕ "
+untracked = "?${count} "
+stashed = "󰏗 "
+modified = "!${count} "
+staged = "+${count} "
+renamed = "»${count} "
+deleted = "✘${count} "
+
+# Python
+[python]
+symbol = " "
+style = "fg:#51A2DA"
+format = "[$symbol$virtualenv]($style) "
+pyenv_version_name = false
+python_binary = ["python3", "python"]
+
+# Conda
+[conda]
+symbol = " "
+style = "fg:#8DAA91"
+format = "[$symbol$environment]($style) "
+ignore_base = true
+
+# Command duration
+[cmd_duration]
+min_time = 2000
+show_milliseconds = false
+style = "fg:#B5A477"
+format = "[󱎫 $duration]($style) "
+
+# Exit status
+[status]
+disabled = false
+style = "fg:#E06C75"
+format = "[$symbol$status]($style) "
+symbol = "✘ "
+success_symbol = ""
+not_found_symbol = "command not found "
+sigint_symbol = "interrupted "
+signal_symbol = "signal "
+
+# Clock
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "fg:#888888"
+format = "[ $time]($style)"
+
+# Character
+[character]
+success_symbol = "[❯](#51A2DA bold)"
+error_symbol = "[❯](#E06C75 bold)"
+vimcmd_symbol = "[❮](#8DAA91 bold)"
+
+# Package version
+[package]
+disabled = true
+
+# Memory-conscious: no expensive module scanning
+[battery]
+disabled = false
+format = "[$percentage]($style) "
